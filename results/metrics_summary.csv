@@ -1,0 +1,5 @@
+dataset,condition,model,grounding_count,region_mentions,gap_coverage,alignment_hits,oa_rate,gs_share,mean_citations,median_citations
+OpenAlex Climate Adaptation,generic,Qwen2.5-1.5B-Instruct,0,3,1,2,0.425,0.135,810.35,252.0
+OpenAlex Climate Adaptation,grounded,Qwen2.5-1.5B-Instruct,0,2,2,2,0.425,0.135,810.35,252.0
+OpenAlex Neglected Tropical Diseases,generic,Qwen2.5-1.5B-Instruct,0,2,2,2,0.705,0.3,170.345,97.5
+OpenAlex Neglected Tropical Diseases,grounded,Qwen2.5-1.5B-Instruct,0,1,2,2,0.705,0.3,170.345,97.5

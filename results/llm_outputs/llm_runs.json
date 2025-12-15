@@ -1,0 +1,522 @@
+{
+  "runs": [
+    {
+      "dataset": "OpenAlex Climate Adaptation",
+      "condition": "generic",
+      "prompt": "Dataset: OpenAlex Climate Adaptation. Below are representative works (title | year | citations | countries | concepts).\n1. A genomic map of climate adaptation in Mediterranean cattle breeds | 2018 | cites=76 | countries=CY,CZ,DZ,ES,FR,IT,MA | concepts=Biology, Local adaptation, Domestication, Mediterranean Basin, Introgression\n2. Mainstreaming climate adaptation in the megacity of S\u00e3o Paulo, Brazil | 2017 | cites=77 | countries=BR,US | concepts=Megacity, Mainstreaming, Climate change, Mainstream, Psychological intervention\n3. Integrating adaptive governance and participatory multicriteria methods: a framework for climate adaptation governance | 2014 | cites=86 | countries=GB,IT,MX | concepts=Corporate governance, Adaptation (eye), Citizen journalism, Environmental resource management, Climate change adaptation\n4. Climate adaptation from a poverty perspective | 2008 | cites=92 | countries=GB,TZ | concepts=Livelihood, Poverty, Additionality, Development economics, Subsistence agriculture\n5. Fostering knowledge networks for climate adaptation | 2013 | cites=100 | countries=IN,US | concepts=Adaptation (eye), Climate change adaptation, Climate science, Climate change, Environmental resource management\nTask: list 3-5 neglected research gaps or misalignments between real-world need and current attention. Use only the provided context. Return bullet points in the format 'gap: ...; evidence: ...'.",
+      "response": "- gap: The lack of comprehensive studies on how local communities in developing countries adapt to climate change, evidenced by the absence of relevant entries like \"A genomic map of climate adaptation in African smallholder farmers\" or \"Climate adaptation strategies among indigenous communities\".\n- gap: There is an underrepresentation of gender perspectives in climate adaptation research, as seen with the absence of entries such as \"Gendered impacts of climate change on food security in rural Africa\" or \"Women's role in climate adaptation in Southeast Asia\".\n- gap: Current research often focuses on developed nations' experiences with climate adaptation, neglecting the",
+      "scores": {
+        "grounding_count": 0,
+        "region_mentions": 3,
+        "gap_coverage": 1,
+        "alignment_hits": 2
+      },
+      "stats": {
+        "dataset": "OpenAlex Climate Adaptation",
+        "n_works": 200,
+        "mean_citations": 810.35,
+        "median_citations": 252.0,
+        "oa_rate": 0.425,
+        "gs_share": 0.135,
+        "top_countries": [
+          [
+            "US",
+            72
+          ],
+          [
+            "GB",
+            39
+          ],
+          [
+            "AU",
+            29
+          ],
+          [
+            "NL",
+            25
+          ],
+          [
+            "CA",
+            17
+          ],
+          [
+            "SE",
+            15
+          ],
+          [
+            "ES",
+            12
+          ],
+          [
+            "DE",
+            12
+          ]
+        ],
+        "top_concepts": [
+          [
+            "Climate change",
+            158
+          ],
+          [
+            "Adaptation (eye)",
+            158
+          ],
+          [
+            "Environmental resource management",
+            93
+          ],
+          [
+            "Vulnerability (computing)",
+            50
+          ],
+          [
+            "Climate change adaptation",
+            49
+          ],
+          [
+            "Environmental science",
+            38
+          ],
+          [
+            "Geography",
+            37
+          ],
+          [
+            "Political science",
+            37
+          ],
+          [
+            "Environmental planning",
+            33
+          ],
+          [
+            "Ecology",
+            23
+          ]
+        ]
+      },
+      "timestamp": "2025-12-15T01:58:19.750866",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "temperature": 0.2
+    },
+    {
+      "dataset": "OpenAlex Climate Adaptation",
+      "condition": "grounded",
+      "prompt": "Dataset: OpenAlex Climate Adaptation. Use the structured indicators to identify neglected research gaps.\nn_works=200, mean_citations=810.4, median_citations=252.0\noa_rate=0.42, global_south_authorship_share=0.14\ntop_countries=[('US', 72), ('GB', 39), ('AU', 29), ('NL', 25), ('CA', 17), ('SE', 15), ('ES', 12), ('DE', 12)]\ntop_concepts=[('Climate change', 158), ('Adaptation (eye)', 158), ('Environmental resource management', 93), ('Vulnerability (computing)', 50), ('Climate change adaptation', 49), ('Environmental science', 38), ('Geography', 37), ('Political science', 37), ('Environmental planning', 33), ('Ecology', 23)]\nheuristic_flags={'low_gs': True, 'low_oa': True, 'concentrated_countries': True, 'top_countries': [('US', 72), ('GB', 39), ('AU', 29), ('NL', 25), ('CA', 17), ('SE', 15), ('ES', 12), ('DE', 12)]}\nLow-attention examples (title | year | citations | OA | countries | concepts):\n1. A genomic map of climate adaptation in Mediterranean cattle breeds | 2018 | cites=76 | OA=True | countries=CY,CZ,DZ,ES,FR,IT,MA | concepts=Biology, Local adaptation, Domestication, Mediterranean Basin, Introgression\n2. Mainstreaming climate adaptation in the megacity of S\u00e3o Paulo, Brazil | 2017 | cites=77 | OA=True | countries=BR,US | concepts=Megacity, Mainstreaming, Climate change, Mainstream, Psychological intervention\n3. Integrating adaptive governance and participatory multicriteria methods: a framework for climate adaptation governance | 2014 | cites=86 | OA=True | countries=GB,IT,MX | concepts=Corporate governance, Adaptation (eye), Citizen journalism, Environmental resource management, Climate change adaptation\n4. Climate adaptation from a poverty perspective | 2008 | cites=92 | OA=False | countries=GB,TZ | concepts=Livelihood, Poverty, Additionality, Development economics, Subsistence agriculture\n5. Fostering knowledge networks for climate adaptation | 2013 | cites=100 | OA=False | countries=IN,US | concepts=Adaptation (eye), Climate change adaptation, Climate science, Climate change, Environmental resource management\nTask: list 3-5 neglected research gaps. Explicitly reference the numeric indicators when making claims. Return bullet points formatted as 'gap: ...; evidence: ...'.",
+      "response": "1. **Gap: Lack of Citation Analysis**  \n   Evidence: The dataset shows an average citation count of 810.4 per work, but many works have very low or no citations at all (e.g., concept \"Climate change\" with 49 citations). This indicates that there is a significant gap in the literature where important topics receive insufficient attention.\n\n2. **Gap: Underrepresentation of Global South Authors**  \n   Evidence: Only 14% of authors come from the Global South (countries listed under top countries). This suggests that research on climate adaptation is predominantly conducted",
+      "scores": {
+        "grounding_count": 0,
+        "region_mentions": 2,
+        "gap_coverage": 2,
+        "alignment_hits": 2
+      },
+      "stats": {
+        "dataset": "OpenAlex Climate Adaptation",
+        "n_works": 200,
+        "mean_citations": 810.35,
+        "median_citations": 252.0,
+        "oa_rate": 0.425,
+        "gs_share": 0.135,
+        "top_countries": [
+          [
+            "US",
+            72
+          ],
+          [
+            "GB",
+            39
+          ],
+          [
+            "AU",
+            29
+          ],
+          [
+            "NL",
+            25
+          ],
+          [
+            "CA",
+            17
+          ],
+          [
+            "SE",
+            15
+          ],
+          [
+            "ES",
+            12
+          ],
+          [
+            "DE",
+            12
+          ]
+        ],
+        "top_concepts": [
+          [
+            "Climate change",
+            158
+          ],
+          [
+            "Adaptation (eye)",
+            158
+          ],
+          [
+            "Environmental resource management",
+            93
+          ],
+          [
+            "Vulnerability (computing)",
+            50
+          ],
+          [
+            "Climate change adaptation",
+            49
+          ],
+          [
+            "Environmental science",
+            38
+          ],
+          [
+            "Geography",
+            37
+          ],
+          [
+            "Political science",
+            37
+          ],
+          [
+            "Environmental planning",
+            33
+          ],
+          [
+            "Ecology",
+            23
+          ]
+        ]
+      },
+      "timestamp": "2025-12-15T01:59:09.488391",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "temperature": 0.2
+    },
+    {
+      "dataset": "OpenAlex Neglected Tropical Diseases",
+      "condition": "generic",
+      "prompt": "Dataset: OpenAlex Neglected Tropical Diseases. Below are representative works (title | year | citations | countries | concepts).\n1. Neglected Tropical Diseases | 2024 | cites=39 | countries=IN | concepts=Neglected tropical diseases, Tropical disease, Geography, Medicine, Internal medicine\n2. Neglected Tropical Diseases - Sub-Saharan Africa | 2016 | cites=44 | countries=GH | concepts=Neglected tropical diseases, Tropical disease, Geography, Tropics, Medicine\n3. Potential for integrated control of neglected tropical diseases in Ethiopia | 2007 | cites=48 | countries=ET,GB,UG | concepts=Neglected tropical diseases, Onchocerciasis, Lymphatic filariasis, Mass drug administration, Tropical disease\n4. Climate change, malaria and neglected tropical diseases: a scoping review | 2024 | cites=52 | countries=AE,AU,BT,CG,CH,DJ,EG,ES,FR,GB,IN,KE,LK,PH,TN,TZ,US | concepts=Malaria, Dengue fever, Neglected tropical diseases, Climate change, Tropical disease\n5. Modeling Transmission Dynamics and Control of Vector-Borne Neglected Tropical Diseases | 2010 | cites=53 | countries=BR,US | concepts=Neglected tropical diseases, Tropical disease, Psychological intervention, Transmission (telecommunications), Vector (molecular biology)\nTask: list 3-5 neglected research gaps or misalignments between real-world need and current attention. Use only the provided context. Return bullet points in the format 'gap: ...; evidence: ...'.",
+      "response": "- gap: The lack of comprehensive studies on the integration of traditional knowledge with modern medical practices to address neglected tropical diseases.\n  - evidence: Limited data on how traditional medicines can complement modern treatments without causing adverse effects.\n\n- gap: A significant portion of neglected tropical diseases research focuses on high-income countries while low- and middle-income countries face critical needs that receive less attention.\n  - evidence: Studies predominantly from developed nations often overlook the specific challenges faced by developing regions like sub-Saharan Africa.\n\n- gap: There is an underrepresentation of women's roles in the global fight against neglected tropical diseases, despite their",
+      "scores": {
+        "grounding_count": 0,
+        "region_mentions": 2,
+        "gap_coverage": 2,
+        "alignment_hits": 2
+      },
+      "stats": {
+        "dataset": "OpenAlex Neglected Tropical Diseases",
+        "n_works": 200,
+        "mean_citations": 170.345,
+        "median_citations": 97.5,
+        "oa_rate": 0.705,
+        "gs_share": 0.3,
+        "top_countries": [
+          [
+            "US",
+            96
+          ],
+          [
+            "GB",
+            71
+          ],
+          [
+            "CH",
+            34
+          ],
+          [
+            "AU",
+            16
+          ],
+          [
+            "BR",
+            15
+          ],
+          [
+            "NL",
+            12
+          ],
+          [
+            "IN",
+            11
+          ],
+          [
+            "KE",
+            10
+          ]
+        ],
+        "top_concepts": [
+          [
+            "Neglected tropical diseases",
+            178
+          ],
+          [
+            "Tropical disease",
+            149
+          ],
+          [
+            "Medicine",
+            108
+          ],
+          [
+            "Disease",
+            54
+          ],
+          [
+            "Geography",
+            50
+          ],
+          [
+            "Environmental health",
+            49
+          ],
+          [
+            "Global health",
+            43
+          ],
+          [
+            "Lymphatic filariasis",
+            39
+          ],
+          [
+            "Public health",
+            38
+          ],
+          [
+            "Malaria",
+            32
+          ]
+        ]
+      },
+      "timestamp": "2025-12-15T01:59:57.274609",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "temperature": 0.2
+    },
+    {
+      "dataset": "OpenAlex Neglected Tropical Diseases",
+      "condition": "grounded",
+      "prompt": "Dataset: OpenAlex Neglected Tropical Diseases. Use the structured indicators to identify neglected research gaps.\nn_works=200, mean_citations=170.3, median_citations=97.5\noa_rate=0.70, global_south_authorship_share=0.30\ntop_countries=[('US', 96), ('GB', 71), ('CH', 34), ('AU', 16), ('BR', 15), ('NL', 12), ('IN', 11), ('KE', 10)]\ntop_concepts=[('Neglected tropical diseases', 178), ('Tropical disease', 149), ('Medicine', 108), ('Disease', 54), ('Geography', 50), ('Environmental health', 49), ('Global health', 43), ('Lymphatic filariasis', 39), ('Public health', 38), ('Malaria', 32)]\nheuristic_flags={'low_gs': True, 'low_oa': False, 'concentrated_countries': True, 'top_countries': [('US', 96), ('GB', 71), ('CH', 34), ('AU', 16), ('BR', 15), ('NL', 12), ('IN', 11), ('KE', 10)]}\nLow-attention examples (title | year | citations | OA | countries | concepts):\n1. Neglected Tropical Diseases | 2024 | cites=39 | OA=False | countries=IN | concepts=Neglected tropical diseases, Tropical disease, Geography, Medicine, Internal medicine\n2. Neglected Tropical Diseases - Sub-Saharan Africa | 2016 | cites=44 | OA=False | countries=GH | concepts=Neglected tropical diseases, Tropical disease, Geography, Tropics, Medicine\n3. Potential for integrated control of neglected tropical diseases in Ethiopia | 2007 | cites=48 | OA=True | countries=ET,GB,UG | concepts=Neglected tropical diseases, Onchocerciasis, Lymphatic filariasis, Mass drug administration, Tropical disease\n4. Climate change, malaria and neglected tropical diseases: a scoping review | 2024 | cites=52 | OA=True | countries=AE,AU,BT,CG,CH,DJ,EG,ES,FR,GB,IN,KE,LK,PH,TN,TZ,US | concepts=Malaria, Dengue fever, Neglected tropical diseases, Climate change, Tropical disease\n5. Modeling Transmission Dynamics and Control of Vector-Borne Neglected Tropical Diseases | 2010 | cites=53 | OA=True | countries=BR,US | concepts=Neglected tropical diseases, Tropical disease, Psychological intervention, Transmission (telecommunications), Vector (molecular biology)\nTask: list 3-5 neglected research gaps. Explicitly reference the numeric indicators when making claims. Return bullet points formatted as 'gap: ...; evidence: ...'.",
+      "response": "* **Gap 1:** Lack of high-citation studies on neglected tropical diseases from low-attention regions like sub-Saharan Africa or Central America. Evidence: The dataset shows that while there is significant citation activity globally, specific regions such as Ghana (cites=44) and Guatemala (cites=48) have lower citation rates compared to other countries with similar geographical locations.\n\n* **Gap 2:** Insufficient attention given to climate change impacts on neglected tropical diseases. Evidence: The study \"Climate change, malaria and neglected tropical diseases: a scoping review\" (cites=5",
+      "scores": {
+        "grounding_count": 0,
+        "region_mentions": 1,
+        "gap_coverage": 2,
+        "alignment_hits": 2
+      },
+      "stats": {
+        "dataset": "OpenAlex Neglected Tropical Diseases",
+        "n_works": 200,
+        "mean_citations": 170.345,
+        "median_citations": 97.5,
+        "oa_rate": 0.705,
+        "gs_share": 0.3,
+        "top_countries": [
+          [
+            "US",
+            96
+          ],
+          [
+            "GB",
+            71
+          ],
+          [
+            "CH",
+            34
+          ],
+          [
+            "AU",
+            16
+          ],
+          [
+            "BR",
+            15
+          ],
+          [
+            "NL",
+            12
+          ],
+          [
+            "IN",
+            11
+          ],
+          [
+            "KE",
+            10
+          ]
+        ],
+        "top_concepts": [
+          [
+            "Neglected tropical diseases",
+            178
+          ],
+          [
+            "Tropical disease",
+            149
+          ],
+          [
+            "Medicine",
+            108
+          ],
+          [
+            "Disease",
+            54
+          ],
+          [
+            "Geography",
+            50
+          ],
+          [
+            "Environmental health",
+            49
+          ],
+          [
+            "Global health",
+            43
+          ],
+          [
+            "Lymphatic filariasis",
+            39
+          ],
+          [
+            "Public health",
+            38
+          ],
+          [
+            "Malaria",
+            32
+          ]
+        ]
+      },
+      "timestamp": "2025-12-15T02:00:46.786008",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "temperature": 0.2
+    }
+  ],
+  "summary": {
+    "grounding_count": {
+      "OpenAlex Neglected Tropical Diseases": {
+        "generic": [
+          0
+        ],
+        "grounded": [
+          0
+        ],
+        "stats": {
+          "wilcoxon_p": 1.0,
+          "mean_diff": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0
+        }
+      },
+      "OpenAlex Climate Adaptation": {
+        "generic": [
+          0
+        ],
+        "grounded": [
+          0
+        ],
+        "stats": {
+          "wilcoxon_p": 1.0,
+          "mean_diff": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0
+        }
+      }
+    },
+    "region_mentions": {
+      "OpenAlex Neglected Tropical Diseases": {
+        "generic": [
+          2
+        ],
+        "grounded": [
+          1
+        ],
+        "stats": {
+          "wilcoxon_p": 1.0,
+          "mean_diff": -1.0,
+          "ci_lower": -1.0,
+          "ci_upper": -1.0
+        }
+      },
+      "OpenAlex Climate Adaptation": {
+        "generic": [
+          3
+        ],
+        "grounded": [
+          2
+        ],
+        "stats": {
+          "wilcoxon_p": 1.0,
+          "mean_diff": -1.0,
+          "ci_lower": -1.0,
+          "ci_upper": -1.0
+        }
+      }
+    },
+    "gap_coverage": {
+      "OpenAlex Neglected Tropical Diseases": {
+        "generic": [
+          2
+        ],
+        "grounded": [
+          2
+        ],
+        "stats": {
+          "wilcoxon_p": 1.0,
+          "mean_diff": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0
+        }
+      },
+      "OpenAlex Climate Adaptation": {
+        "generic": [
+          1
+        ],
+        "grounded": [
+          2
+        ],
+        "stats": {
+          "wilcoxon_p": 1.0,
+          "mean_diff": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0
+        }
+      }
+    },
+    "alignment_hits": {
+      "OpenAlex Neglected Tropical Diseases": {
+        "generic": [
+          2
+        ],
+        "grounded": [
+          2
+        ],
+        "stats": {
+          "wilcoxon_p": 1.0,
+          "mean_diff": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0
+        }
+      },
+      "OpenAlex Climate Adaptation": {
+        "generic": [
+          2
+        ],
+        "grounded": [
+          2
+        ],
+        "stats": {
+          "wilcoxon_p": 1.0,
+          "mean_diff": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0
+        }
+      }
+    }
+  }
+}
