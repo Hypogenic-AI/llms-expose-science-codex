@@ -1,0 +1,45 @@
+idea:
+  title: Can LLMs Expose What Science Refuses to See?
+  domain: artificial_intelligence
+  hypothesis: 'Large language models (LLMs) can be used not only to automate existing
+    scientific workflows but also to systematically identify and expose important
+    scientific and societal problems that are under-researched or ignored, by analyzing
+    disparities between well-funded, benchmarked topics and those with high real-world
+    impact but low academic or commercial attention.
+
+    '
+  background:
+    description: "AI for science currently behaves more like a turbo-charger on existing\
+      \ agendas than a tool for asking whether we are solving the right problems.\
+      \ It accelerates what is already well funded, easily measurable, and convenient\
+      \ for CS labs, while messy, politically inconvenient, or low-profit problems\
+      \ that shape real lives remain in the dark.\nGestational diabetes mellitus (GDM)\
+      \ is a telling example. Routine screening in many health systems still occurs\
+      \ at 24\u201328 weeks of pregnancy, long after metabolic changes begin and when\
+      \ prevention options are constrained. Meanwhile, women\u2019s health conditions\
+      \ are systematically underfunded relative to their burden; chronic disorders\
+      \ like endometriosis can impose an economic cost per patient comparable to,\
+      \ or greater than, diabetes, yet progress and funding lag far behind. These\
+      \ gaps do not exist because GDM or endometriosis are scientifically dull, but\
+      \ because they are entangled with pregnancy, menstruation, chronic pain, and\
+      \ gendered stigma\u2014topics that attract less money, less political attention,\
+      \ and fewer glamorous AI benchmarks.\nThe same pattern appears beyond biomedicine.\
+      \ In education, social care, and public health, practitioners have documented\
+      \ practice gap for decades: the hardest everyday problems rarely match the neat\
+      \ proxies used in academic models. AI researchers optimize benchmarks and publish;\
+      \ patients wait years and anything unprofitable stays broken.\nMy question is\
+      \ therefore intentionally critical: can we use LLMs not just to automate what\
+      \ scientists already do, but to systematically expose what they ignore? I treat\
+      \ LLMs as gap detectors that read both sides of reality\u2014papers, grants,\
+      \ and benchmarks on one side; clinical notes, incident reports, worker complaints,\
+      \ patient forums, etc on the other\u2014and surface where pain is high but attention\
+      \ is low. We need a LLM-based agentic system that keeps science answerable to\
+      \ the world it claims to improve."
+  metadata:
+    source: IdeaHub
+    source_url: https://hypogenic.ai/ideahub/idea/68eUHtLQpxwQ1MuH6bbu
+    idea_id: can_llms_expose_what_science_r_20251214_191455_c20742ff
+    created_at: '2025-12-14T19:14:55.113483'
+    status: submitted
+    github_repo_name: llms-expose-science-codex
+    github_repo_url: https://github.com/Hypogenic-AI/llms-expose-science-codex
